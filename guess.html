@@ -16,8 +16,10 @@
             hide("maxTryCount");
             hide("tryCountSelectButton");
             hide("altPlayButton");
-            document.getElementById("info").style.display = "block";
-            document.getElementById("userAnswer").style.display = "block";
+            document.getElementById("info1").style.display = "block";
+            document.getElementById("userAnswer1").style.display = "block";
+            document.getElementById("info2").style.display = "block";
+            document.getElementById("userAnswer2").style.display = "block";
             document.getElementById("button").style.display = "inline-block";
         }
 
@@ -37,24 +39,50 @@
             document.getElementById(id).style.display = "none";
         }
 
+        function meeting() {
+            ///TODO спросить у пользователей имена, слелать для одного, либо вдвоем
+
+        }
+
         function guess() {
             tryCount++
-            var userAnswer = readInt("userAnswer");
-            if (userAnswer == answer) {
-                write("info", "<b>Поздравляю,вы угадали!<b>");
+            var userAnswer1 = readInt("userAnswer1");
+            var userAnswer2 = readInt("userAnswer2");
+            if (userAnswer1 == answer) {
+                write("info1", "<b>Поздравляю,1,вы угадали!<b>");
                 hide("button");
-                hide("userAnswer");
+                hide("userAnswer1");
                 document.getElementById("retryButton").style.display = "inline-block";
-            } else if (tryCount >= maxTryCount) {
-                write("info", "<b>Вы проиграли<br>Правильный ответ: " + answer) + "<b>";
-                hide("button");
-                hide("userAnswer");
-                document.getElementById("retryButton").style.display = "inline-block";
-            } else if (userAnswer > answer) {
-                write("info", "Вы ввели слишком большое число<br>Попробуйте еще раз. Осталось попыток: " + (maxTryCount - tryCount) + "<br>Введите число от 1 до 100:");
-            } else if (userAnswer < answer) {
-                write("info", "Вы ввели слишком маленькое число.<br>Попробуйте еще раз. Осталось попыток: " + (maxTryCount - tryCount) + "<br>Введите число от 1 до 100:");
             }
+            if (userAnswer2 == answer) {
+                write("info2", "<b>Поздравляю,2,вы угадали!<b>");
+                hide("button");
+                hide("userAnswer2");
+                document.getElementById("retryButton").style.display = "inline-block";
+
+            }
+            if (userAnswer1 > answer) {
+                write("info1", "1Вы ввели слишком большое число.");
+            }
+            if (userAnswer1 < answer) {
+                write("info1", "1Вы ввели слишком маленькое число.");
+            }
+            if (userAnswer2 > answer) {
+                write("info2", "2Вы ввели слишком большое число.");
+            }
+            if (userAnswer2 < answer) {
+                write("info2", "2Вы ввели слишком маленькое число.");
+            }
+            write("info", "Попробуйте еще раз!<br>Осталось попыток: " + (maxTryCount - tryCount));
+            if (tryCount >= maxTryCount || userAnswer1 == answer || userAnswer2 == answer) {
+                write("info", "<b>Игра окончена.<br>Если кто не понял, правильный ответ был " + answer);
+                hide("button");
+                hide("userAnswer1");
+                hide("userAnswer2");
+                document.getElementById("retryButton").style.display = "inline-block";
+            }
+            return;
+
         }
 
         function guess1() {
@@ -137,16 +165,19 @@
                         <p id="askTryCounts">Укажите количество попыток</p>
                         <input type="text" id="maxTryCount">
                         <br>
+
+
+                        <p id="info1" style="display:none;">Угадайте число от 1 до 100:<br>Игрок 1</p>
+                        <input type="text" style="display:none;" id="userAnswer1">
+
+                        <p id="info2" style="display:none;">Игрок 2</p>
+                        <input type="text" style="display:none;" id="userAnswer2">
+
+                        <p id="info"></p>
                         <a href="#" onClick="tryCountSelect();" id="tryCountSelectButton">Начать</a>
-
-
-                        <p id="info" style="display:none;">Угадайте число от 1 до 100</p>
-                        <input type="text" style="display:none;" id="userAnswer">
-
                         <a href="#" onClick="guess();" style="display:none;" id="button">Проверить</a>
                         <a href="#" onClick="retry();" style="display:none;" id="retryButton">Заново</a>
-
-                        <a href="#" onClick="guess1();" id="altPlayButton">Сыграть с друзьями</a>
+                        <a href="#" onClick="guess1();" id="altPlayButton">Играть с друзьями</a>
                     </div>
 
                 </div>

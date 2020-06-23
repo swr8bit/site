@@ -10,7 +10,7 @@ body {
 }
 
 .header {
-    min-width: 1000px;
+    min-width: 800px;
     border-bottom: 1px solid #b5b7ba;
     background-color: #dfdfdf;
     margin: 0 auto;
@@ -44,7 +44,7 @@ body {
 }
 
 .content {
-    min-width: 1000px;
+    min-width: 800px;
     margin: 0 auto;
     min-height: calc(100vh - 140px);
 }
@@ -79,11 +79,12 @@ body {
     width: 389px;
     margin-left: 48px;
     margin-right: 8px;
+    margin-bottom: 28px;
     float: left;
 }
 
 .content .box_text {
-    width: 670px;
+    width: 617px;
     background-color: #ffffff;
     float: right;
     padding: 27px 38px 77px 48px;
@@ -114,7 +115,7 @@ body {
 
 .content .box {
     background-color: #ffffff;
-    width: 1000px;
+    width: 800px;
     min-height: 500px;
     margin: 50px auto 0 auto;
     padding-top: 37px;
