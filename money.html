@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>swr8bit</title>
+	<link rel="stylesheet" href="style.css"> 
+	<script type="text/javascript">
+
+	function calculate(){
+		rub=+document.getElementById("rub").value;
+		percent=+document.getElementById("percent").value;
+		maxYears=+document.getElementById("maxYears").value;
+		var sum=rub;
+		for(years=1;years<=maxYears;years++){
+			sum=sum+(sum*percent/100);
+			
+		}	
+		result="Через "+maxYears+" лет сумма вклада составит\n"+sum.toFixed(2)+" рублей\n";
+			document.getElementById("result").innerHTML=result;
+	}
+
+	var result="Рассчитайте свой вклад";
+	var rub;
+	var percent;
+	var maxYears;
+
+	</script>
+
+</head>
+<body>
+
+<div class="content">
+	<div class="header">
+		<a href="index.html">Главная</a>
+		<a href="puzzle.html">Загадки</a>
+		<a href="guess.html">Угадай число</a>
+		<a href="money.html">Калькулятор суммы вклада</a>
+	</div>
+<div class="contentWrap">
+	<div class="content">
+		<div class="center">
+
+			<h1>Калькулятор суммы вклада</h1>
+
+			<div class="box">
+
+				<br>
+				<p>Введите желаемую сумму вклада в рублях</p>
+				<input type="text" id="rub">
+
+				<p>Укажите проценты годовых</p>
+				<input type="text" id="percent">
+
+				<p>Укажите на сколько лет будет вклад</p>
+				<input type="text" id="maxYears">			
+
+				<br>
+				<a href="#" onClick="calculate();">Посчитать</a>
+				<br>
+				<br>
+
+				<p><br>
+					<script>
+						document.write(result);
+					</script>
+				<p>
+
+				<p id="result"><p>
+			</div>
+					
+		</div>
+	</div>
+</div>
+
+</div>
+<div class="footer">
+&copy; swr8bit	2020
+</div>
+
+
+
+</body>
+</html>
