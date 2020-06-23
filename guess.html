@@ -15,6 +15,7 @@
             hide("askTryCounts");
             hide("maxTryCount");
             hide("tryCountSelectButton");
+            hide("altPlayButton");
             document.getElementById("info").style.display = "block";
             document.getElementById("userAnswer").style.display = "block";
             document.getElementById("button").style.display = "inline-block";
@@ -55,8 +56,8 @@
                 write("info", "Вы ввели слишком маленькое число.<br>Попробуйте еще раз. Осталось попыток: " + (maxTryCount - tryCount) + "<br>Введите число от 1 до 100:");
             }
         }
-        ///TODO запросить количество попыток, добавить кнопку игры через alert
-        /*      function guess1() {
+
+        function guess1() {
 
             var maxPlayerNum = +prompt("Интерактивная игра \"Отгадай число\"\nВведите число игроков.");
             var playerNum = 1;
@@ -110,8 +111,7 @@
             alert("Игра окончена.\nЕсли кто не понял, правильный ответ был " + answer);
 
 
-		}
-		*/
+        }
     </script>
 
 </head>
@@ -139,12 +139,14 @@
                         <br>
                         <a href="#" onClick="tryCountSelect();" id="tryCountSelectButton">Начать</a>
 
+
                         <p id="info" style="display:none;">Угадайте число от 1 до 100</p>
                         <input type="text" style="display:none;" id="userAnswer">
-                        <br>
+
                         <a href="#" onClick="guess();" style="display:none;" id="button">Проверить</a>
                         <a href="#" onClick="retry();" style="display:none;" id="retryButton">Заново</a>
 
+                        <a href="#" onClick="guess1();" id="altPlayButton">Сыграть с друзьями</a>
                     </div>
 
                 </div>
