@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
-
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +10,7 @@ body {
 }
 
 .header {
-    min-width: 1200px;
+    min-width: 1000px;
     border-bottom: 1px solid #b5b7ba;
     background-color: #dfdfdf;
     margin: 0 auto;
@@ -25,7 +24,6 @@ body {
 }
 
 .center {
-    
     margin: 0 auto;
 }
 
@@ -46,9 +44,9 @@ body {
 }
 
 .content {
-    min-width: 1200px;
+    min-width: 1000px;
     margin: 0 auto;
-    min-height: calc(100vh - 140px); 
+    min-height: calc(100vh - 140px);
 }
 
 .content h1 {
@@ -72,7 +70,7 @@ body {
 }
 
 .content h5 {
-    color:  #242424;
+    color: #242424;
     font-size: 24px;
     text-align: left;
 }
@@ -85,7 +83,7 @@ body {
 }
 
 .content .box_text {
-    width: 671px;
+    width: 670px;
     background-color: #ffffff;
     float: right;
     padding: 27px 38px 77px 48px;
@@ -101,15 +99,14 @@ body {
     margin-bottom: 31px;
 }
 
-.content .box_text a  {
+.content .box_text a {
     color: #40678a;
     font-size: 24px;
     font-weight: 100;
     text-align: center;
     text-decoration: none;
-    padding-right:30px;
+    padding-right: 30px;
 }
-
 
 .content .media {
     margin-right: 0;
@@ -117,7 +114,7 @@ body {
 
 .content .box {
     background-color: #ffffff;
-    width: 1200px;
+    width: 1000px;
     min-height: 500px;
     margin: 50px auto 0 auto;
     padding-top: 37px;
@@ -139,8 +136,8 @@ body {
     background-color: #f5f5f5;
     width: 457px;
     height: 34px;
-    padding-left:10px;
-    font-size:20px;
+    padding-left: 10px;
+    font-size: 20px;
     font-weight: 100;
     margin-bottom: 12px;
 }
@@ -148,21 +145,23 @@ body {
 .content .box a {
     display: block;
     float: left;
-    background-color:  #8cbbd3;
-    color:  #ffffff;
+    background-color: #8cbbd3;
+    color: #ffffff;
     font-size: 24px;
     font-weight: 300;
     text-align: center;
     text-decoration: none;
     margin-top: 30px;
-    padding:11px 51px;
+    margin-right: 12px;
+    padding: 11px 51px;
 }
 
 .content .box a:hover {
     background-color: #5ba1d3;
 }
 
-.footer { /* # == id */
+.footer {
+    /* # == id */
     background-color: #434445;
     width: 100%;
     float: left;
