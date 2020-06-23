@@ -9,19 +9,8 @@
         var answer = parseInt(Math.random() * 100);
         var tryCount = 0;
         var maxTryCount;
-
-        function tryCountSelect() {
-            maxTryCount = readInt("maxTryCount");
-            hide("askTryCounts");
-            hide("maxTryCount");
-            hide("tryCountSelectButton");
-            hide("altPlayButton");
-            document.getElementById("info1").style.display = "block";
-            document.getElementById("userAnswer1").style.display = "block";
-            document.getElementById("info2").style.display = "block";
-            document.getElementById("userAnswer2").style.display = "block";
-            document.getElementById("button").style.display = "inline-block";
-        }
+        var user1name;
+        var user2name;
 
         function retry() {
             window.location.reload();
@@ -29,6 +18,10 @@
 
         function readInt(id) {
             return +document.getElementById(id).value;
+        }
+
+        function readText(id) {
+            return document.getElementById(id).value;
         }
 
         function write(id, text) {
@@ -39,9 +32,31 @@
             document.getElementById(id).style.display = "none";
         }
 
-        function meeting() {
+        function tryCountSelect() {
             ///TODO спросить у пользователей имена, слелать для одного, либо вдвоем
+            maxTryCount = readInt("maxTryCount");
+            document.getElementById("info1").style.display = "block";
+            document.getElementById("user1name").style.display = "block";
+            document.getElementById("info2").style.display = "block";
+            document.getElementById("user2name").style.display = "block";
+            document.getElementById("tryCountSelectButton").style.display = "inline-block";
+            hide("askTryCounts");
+            hide("maxTryCount");
+            hide("meetingButton");
+            hide("altPlayButton");
+        }
 
+        function meeting() {
+            user1name = readText("user1name");
+            user2name = readText("user2name");
+            write("info1", ("Введите число от 1 до 100 в свое поле<br> <br>" + user1name));
+            write("info2", user2name);
+            document.getElementById("userAnswer1").style.display = "block";
+            document.getElementById("userAnswer2").style.display = "block";
+            document.getElementById("checkButton").style.display = "inline-block";
+            hide("tryCountSelectButton");
+            hide("user1name");
+            hide("user2name");
         }
 
         function guess() {
@@ -50,13 +65,13 @@
             var userAnswer2 = readInt("userAnswer2");
             if (userAnswer1 == answer) {
                 write("info1", "<b>Поздравляю,1,вы угадали!<b>");
-                hide("button");
+                hide("checkButton");
                 hide("userAnswer1");
                 document.getElementById("retryButton").style.display = "inline-block";
             }
             if (userAnswer2 == answer) {
                 write("info2", "<b>Поздравляю,2,вы угадали!<b>");
-                hide("button");
+                hide("checkButton");
                 hide("userAnswer2");
                 document.getElementById("retryButton").style.display = "inline-block";
 
@@ -76,7 +91,7 @@
             write("info", "Попробуйте еще раз!<br>Осталось попыток: " + (maxTryCount - tryCount));
             if (tryCount >= maxTryCount || userAnswer1 == answer || userAnswer2 == answer) {
                 write("info", "<b>Игра окончена.<br>Если кто не понял, правильный ответ был " + answer);
-                hide("button");
+                hide("checkButton");
                 hide("userAnswer1");
                 hide("userAnswer2");
                 document.getElementById("retryButton").style.display = "inline-block";
@@ -167,15 +182,18 @@
                         <br>
 
 
-                        <p id="info1" style="display:none;">Угадайте число от 1 до 100:<br>Игрок 1</p>
+                        <p id="info1" style="display:none;">Представьтесь.<br> <br>Игрок 1:</p>
                         <input type="text" style="display:none;" id="userAnswer1">
+                        <input type="text" style="display:none;" id="user1name">
 
-                        <p id="info2" style="display:none;">Игрок 2</p>
+                        <p id="info2" style="display:none;">Игрок 2:</p>
                         <input type="text" style="display:none;" id="userAnswer2">
+                        <input type="text" style="display:none;" id="user2name">
 
                         <p id="info"></p>
-                        <a href="#" onClick="tryCountSelect();" id="tryCountSelectButton">Начать</a>
-                        <a href="#" onClick="guess();" style="display:none;" id="button">Проверить</a>
+                        <a href="#" onClick="tryCountSelect();" id="meetingButton">Далее</a>
+                        <a href="#" onClick="meeting();" style="display:none;" id="tryCountSelectButton">Начать</a>
+                        <a href="#" onClick="guess();" style="display:none;" id="checkButton">Проверить</a>
                         <a href="#" onClick="retry();" style="display:none;" id="retryButton">Заново</a>
                         <a href="#" onClick="guess1();" id="altPlayButton">Играть с друзьями</a>
                     </div>
