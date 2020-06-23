@@ -8,10 +8,24 @@
     <script type="text/javascript">
         var answer = parseInt(Math.random() * 100);
         var tryCount = 0;
-        var maxTryCount = 3;
+        var maxTryCount;
 
-        function readInt() {
-            return +document.getElementById("userAnswer").value;
+        function tryCountSelect() {
+            maxTryCount = readInt("maxTryCount");
+            hide("askTryCounts");
+            hide("maxTryCount");
+            hide("tryCountSelectButton");
+            document.getElementById("info").style.display = "block";
+            document.getElementById("userAnswer").style.display = "block";
+            document.getElementById("button").style.display = "inline-block";
+        }
+
+        function retry() {
+            window.location.reload();
+        }
+
+        function readInt(id) {
+            return +document.getElementById(id).value;
         }
 
         function write(id, text) {
@@ -24,19 +38,21 @@
 
         function guess() {
             tryCount++
-            var userAnswer = readInt();
+            var userAnswer = readInt("userAnswer");
             if (userAnswer == answer) {
                 write("info", "<b>Поздравляю,вы угадали!<b>");
                 hide("button");
                 hide("userAnswer");
+                document.getElementById("retryButton").style.display = "inline-block";
             } else if (tryCount >= maxTryCount) {
                 write("info", "<b>Вы проиграли<br>Правильный ответ: " + answer) + "<b>";
                 hide("button");
                 hide("userAnswer");
+                document.getElementById("retryButton").style.display = "inline-block";
             } else if (userAnswer > answer) {
-                write("info", " Вы ввели слишком большое число<br>Попробуйте еще раз. введите число от 1 до 100");
+                write("info", "Вы ввели слишком большое число<br>Попробуйте еще раз. Осталось попыток: " + (maxTryCount - tryCount) + "<br>Введите число от 1 до 100:");
             } else if (userAnswer < answer) {
-                write("info", " Вы ввели слишком маленькое число<br>Попробуйте еще раз. введите число от 1 до 100");
+                write("info", "Вы ввели слишком маленькое число.<br>Попробуйте еще раз. Осталось попыток: " + (maxTryCount - tryCount) + "<br>Введите число от 1 до 100:");
             }
         }
         ///TODO запросить количество попыток, добавить кнопку игры через alert
@@ -118,10 +134,16 @@
                     <div class="box">
 
                         <br>
-                        <p id="info">Угадайте число от 0 до 100</p>
-                        <input type="text" id="userAnswer">
+                        <p id="askTryCounts">Укажите количество попыток</p>
+                        <input type="text" id="maxTryCount">
                         <br>
-                        <a href="#" onClick="guess();" id="button">Начать</a>
+                        <a href="#" onClick="tryCountSelect();" id="tryCountSelectButton">Начать</a>
+
+                        <p id="info" style="display:none;">Угадайте число от 1 до 100</p>
+                        <input type="text" style="display:none;" id="userAnswer">
+                        <br>
+                        <a href="#" onClick="guess();" style="display:none;" id="button">Проверить</a>
+                        <a href="#" onClick="retry();" style="display:none;" id="retryButton">Заново</a>
 
                     </div>
 
