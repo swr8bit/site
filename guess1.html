@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>swr8bit</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        var answer = parseInt(Math.random() * 100);
+        var tryCount = 0;
+        var maxTryCount;
+
+        function tryCountSelect() {
+            maxTryCount = readInt("maxTryCount");
+            hide("askTryCounts");
+            hide("maxTryCount");
+            hide("tryCountSelectButton");
+            hide("altPlayButton");
+            document.getElementById("info").style.display = "block";
+            document.getElementById("userAnswer").style.display = "block";
+            document.getElementById("button").style.display = "inline-block";
+        }
+
+        function retry() {
+            window.location.reload();
+        }
+
+        function readInt(id) {
+            return +document.getElementById(id).value;
+        }
+
+        function write(id, text) {
+            document.getElementById(id).innerHTML = text;
+        }
+
+        function hide(id) {
+            document.getElementById(id).style.display = "none";
+        }
+
+        function guess() {
+            tryCount++
+            var userAnswer = readInt("userAnswer");
+            if (userAnswer == answer) {
+                write("info", "<b>Поздравляю,вы угадали!<b>");
+                hide("button");
+                hide("userAnswer");
+                document.getElementById("retryButton").style.display = "inline-block";
+            } else if (tryCount >= maxTryCount) {
+                write("info", "<b>Вы проиграли<br>Правильный ответ: " + answer) + "<b>";
+                hide("button");
+                hide("userAnswer");
+                document.getElementById("retryButton").style.display = "inline-block";
+            } else if (userAnswer > answer) {
+                write("info", "Вы ввели слишком большое число<br>Попробуйте еще раз. Осталось попыток: " + (maxTryCount - tryCount) + "<br>Введите число от 1 до 100:");
+            } else if (userAnswer < answer) {
+                write("info", "Вы ввели слишком маленькое число.<br>Попробуйте еще раз. Осталось попыток: " + (maxTryCount - tryCount) + "<br>Введите число от 1 до 100:");
+            }
+        }
+
+        function guess1() {
+
+            var maxPlayerNum = +prompt("Интерактивная игра \"Отгадай число\"\nВведите число игроков.");
+            var playerNum = 1;
+            var maxTryCount = +prompt("Введите количество попыток, \"0\" - неограничено.");
+
+            if (maxTryCount == 0) {
+                maxTryCount = Infinity;
+            }
+
+            var tryCount = 0;
+
+            while (tryCount < maxTryCount) {
+
+
+                if (playerNum == 1 && tryCount != 0 && maxPlayerNum != 1) {
+                    alert("Никто не угадал!\nПереход хода к Игроку " + playerNum);
+                }
+
+                if (maxTryCount != Infinity) {
+                    var userAnswer = prompt("Игрок " + playerNum + ", отгадайте число от 1 до 100\nУ вас осталось " + (maxTryCount - tryCount) + " попыток.\n\"q\" - прервать игру.");
+                } else {
+                    userAnswer = prompt("Игрок " + playerNum + ", отгадайте число от 1 до 100\nУ вас неограниченое количество попыток!\n\"q\" - прервать игру.");
+                }
+
+                if (userAnswer == "q") {
+                    alert("Игрок " + playerNum + " прервал игру.");
+                    break;
+                }
+                userAnswer = parseInt(userAnswer);
+
+                if (userAnswer == answer) {
+                    alert("Поздравляем, Игрок " + playerNum + ", вы победили!");
+                    break;
+
+                } else if (userAnswer > answer) {
+                    alert("Игрок " + playerNum + ", вы ввели слишком большое число");
+                } else if (userAnswer < answer) {
+                    alert("Игрок " + playerNum + ", вы ввели слишком маленькое число");
+                }
+
+                if (playerNum == maxPlayerNum) {
+                    tryCount++;
+                }
+                if (playerNum == maxPlayerNum) {
+                    playerNum = 1;
+                } else {
+                    playerNum++;
+                }
+            }
+
+            alert("Игра окончена.\nЕсли кто не понял, правильный ответ был " + answer);
+
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="content">
+        <div class="header">
+            <a href="index.html">Главная</a>
+            <a href="puzzle.html">Загадки</a>
+            <a href="guess.html">Угадай число</a>
+            <a href="money.html">Калькулятор суммы вклада</a>
+        </div>
+        <div class="contentWrap">
+            <div class="content">
+                <div class="center">
+
+                    <h1>Угадай число</h1>
+
+                    <div class="box">
+
+                        <br>
+                        <p id="askTryCounts">Укажите количество попыток</p>
+                        <input type="text" id="maxTryCount">
+                        <br>
+                        <a href="#" onClick="tryCountSelect();" id="tryCountSelectButton">Начать</a>
+
+
+                        <p id="info" style="display:none;">Угадайте число от 1 до 100</p>
+                        <input type="text" style="display:none;" id="userAnswer">
+
+                        <a href="#" onClick="guess();" style="display:none;" id="button">Проверить</a>
+                        <a href="#" onClick="retry();" style="display:none;" id="retryButton">Заново</a>
+
+                        <a href="#" onClick="guess1();" id="altPlayButton">Сыграть с друзьями</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        &copy; swr8bit 2020
+    </div>
+
+
+
+</body>
+
+</html>
