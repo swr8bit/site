@@ -8,13 +8,11 @@
 <body>
 
 <div class="content">
-
-	<div class="header">       
+	
 		<?php
-			include	"menu.php";
+			include	"header.php";
 		?>
-	</div>
-
+	
 	<h1><i>swr8bit</i>. cайт начинающего программиста</h1>
 
 	<div class="center">

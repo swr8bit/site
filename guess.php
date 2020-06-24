@@ -162,12 +162,10 @@
 <body>
 
     <div class="content">
-
-	<div class="header">       
-		<?php
-			include	"menu.php";
+	
+        <?php
+			include	"header.php";
 		?>
-	</div>
 	
         <div class="contentWrap">
             <div class="content">
