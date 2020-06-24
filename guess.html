@@ -64,29 +64,29 @@
             var userAnswer1 = readInt("userAnswer1");
             var userAnswer2 = readInt("userAnswer2");
             if (userAnswer1 == answer) {
-                write("info1", "<b>Поздравляю,1,вы угадали!<b>");
+                write("info1", "<b>Поздравляю, " + user1name + ", вы угадали!<b>");
                 hide("checkButton");
                 hide("userAnswer1");
                 document.getElementById("retryButton").style.display = "inline-block";
             }
             if (userAnswer2 == answer) {
-                write("info2", "<b>Поздравляю,2,вы угадали!<b>");
+                write("info2", "<b>Поздравляю, " + user2name + ", вы угадали!<b>");
                 hide("checkButton");
                 hide("userAnswer2");
                 document.getElementById("retryButton").style.display = "inline-block";
 
             }
             if (userAnswer1 > answer) {
-                write("info1", "1Вы ввели слишком большое число.");
+                write("info1", (user1name + ", вы ввели слишком большое число."));
             }
             if (userAnswer1 < answer) {
-                write("info1", "1Вы ввели слишком маленькое число.");
+                write("info1", (user1name + ", вы ввели слишком маленькое число."));
             }
             if (userAnswer2 > answer) {
-                write("info2", "2Вы ввели слишком большое число.");
+                write("info2", (user2name + ", вы ввели слишком большое число."));
             }
             if (userAnswer2 < answer) {
-                write("info2", "2Вы ввели слишком маленькое число.");
+                write("info2", (user2name + ", вы ввели слишком маленькое число."));
             }
             write("info", "Попробуйте еще раз!<br>Осталось попыток: " + (maxTryCount - tryCount));
             if (tryCount >= maxTryCount || userAnswer1 == answer || userAnswer2 == answer) {
