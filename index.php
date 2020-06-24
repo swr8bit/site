@@ -8,10 +8,12 @@
 <body>
 
 <div class="content">
-	
-	<?php
-		include	"menu.php";
-	?>
+
+	<div class="header">       
+		<?php
+			include	"menu.php";
+		?>
+	</div>
 
 	<h1><i>swr8bit</i>. cайт начинающего программиста</h1>
 
@@ -24,10 +26,10 @@
 			<p>На этом сайте я буду делиться своими достижениями и собирать <a href="#">моё портфолио</a>.</p>
 
 			<p>Выражаю благодарность <a href="https://stayhome.geekbrains.ru/">бесплатным курсам GeekBкains</a> за помощь в обучении.</p>
-			<p>Вот немного интересного:<br>
-				<a href="puzzle.html">Загадки,</a>
-				<a href="guess.html">Угадай число,</a>
-				<a href="money.html">Калькулятор суммы вклада</a>
+			<p>Вот немного интересного:<br>    
+				<?php
+					include	"menu.php";
+				?>
 			</p>
 		</div>
 	</div>
