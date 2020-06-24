@@ -8,12 +8,10 @@
 <body>
 
 <div class="content">
-	<div class="header">
-		<a href="index.html">Главная</a>
-		<a href="puzzle.html">Загадки</a>
-		<a href="guess.html">Угадай число</a>
-		<a href="money.html">Калькулятор суммы вклада</a>
-	</div>
+	
+	<?php
+		include	"menu.php";
+	?>
 
 	<h1><i>swr8bit</i>. cайт начинающего программиста</h1>
 
@@ -35,7 +33,7 @@
 	</div>
 </div>
 <div class="footer">
-&copy; swr8bit	2020
+&copy; swr8bit	<?php echo date("Y");?>
 </div>
 
 
