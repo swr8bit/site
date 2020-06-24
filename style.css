@@ -77,19 +77,20 @@ body {
 
 .content img {
     width: 389px;
-    margin-left: 48px;
-    margin-right: 8px;
+    margin-left: 78px;
+    margin-right: 38px;
     margin-bottom: 28px;
     float: left;
 }
 
 .content .box_text {
-    width: 617px;
+    width: 557px;
     background-color: #ffffff;
     float: right;
     padding: 27px 38px 77px 48px;
     margin-bottom: 100px;
-    margin-right: 48px;
+    margin-right: 78px;
+    margin-left: 0px;
 }
 
 .content .box_text p {
