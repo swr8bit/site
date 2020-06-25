@@ -20,11 +20,11 @@
             <div class="content">
                 <div class="center">
 
-                    <h1>Игра в загадки</h1>
+                    <h1>Игра в загадки PHP</h1>
 
                     <div class="box">
 
-                        <?php
+                        <p><b><?php
 
                             if(isset($_GET['userAnswer1']) && isset($_GET['userAnswer2']) && isset($_GET['userAnswer3'])){
 
@@ -45,7 +45,7 @@
                                 }
                                 echo "Вы угадали ". $score. " загадок.";
                             }                        
-                        ?>
+                        ?><b></p>
 
                         <form method="GET">
                             
@@ -60,7 +60,7 @@
                             
                             <br><br><br>
 
-                            <input type="submit" value="Ответить" name="">
+                            <input type="submit" class="button" value="Ответить" name="">
                             
                         </form>
 

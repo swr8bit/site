@@ -176,7 +176,8 @@
                     <div class="box">
 
                         <br>
-                        <p id="askTryCounts">Укажите количество попыток<br><br></p>
+                        <p id="askTryCounts">Укажите количество попыток</p>
+                        <br>
                         <input type="text" id="maxTryCount">
                         <br>
 

@@ -128,7 +128,7 @@
                         </p>
                         <input type="text" id="userAnswer3">
 
-                        <br>
+                        <br><br><br>
                         <a href="#" onClick="checkAnswers();" id="button">Ответить</a>
 
                         <a href="#" onClick="retry();" style="display:none;" id="retryButton">Заново</a>
