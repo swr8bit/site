@@ -5,86 +5,6 @@
     <meta charset="utf-8">
     <title>swr8bit</title>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript">
-        function checkAnswer(inputId, answers) {
-            var userAnswer = document.getElementById(inputId).value;
-            userAnswer = userAnswer.toLowerCase();
-            if (answers.includes(userAnswer) == true) {
-                answerCount++;
-            } else {
-                noAnswerCount++;
-            }
-        }
-
-        function write(id, text) {
-            document.getElementById(id).innerHTML = text;
-        }
-
-        function hide(id) {
-            document.getElementById(id).style.display = "none";
-        }
-
-        function retry() {
-            window.location.reload();
-        }
-
-        function win() {
-            write("info", "Вы выиграли. количество отгаданых загадок - " + answerCount);
-            hide("userAnswer1");
-            hide("userAnswer2");
-            hide("userAnswer3");
-            hide("ask1");
-            hide("ask2");
-            hide("ask3");
-            hide("button");
-
-            document.getElementById("retryButton").style.display = "inline-block";
-        }
-
-        function loss() {
-            write("info", "Проигрыш. Количество правильных ответов - " + answerCount);
-            hide("userAnswer1");
-            hide("userAnswer2");
-            hide("userAnswer3");
-            hide("ask1");
-            hide("ask2");
-            hide("ask3");
-            hide("button");
-
-            document.getElementById("retryButton").style.display = "inline-block";
-        }
-
-        function checkAnswers() {
-            checkAnswer("userAnswer1", askNum[0]);
-            checkAnswer("userAnswer2", askNum[1]);
-            checkAnswer("userAnswer3", askNum[2]);
-            if (answerCount > noAnswerCount) {
-                win();
-            } else {
-                loss();
-            }
-
-        }
-
-        var askMatrix = [
-            ["Висит груша - нельзя схавать", "лампа", "лампочка"],
-            ["Зимой и летом одним цветом", "ель", "елка", "ёлка", "саша белый"],
-            ["Без окон без дверей полна горница людей", "огурец", "огурчик"],
-            ["Туда сюда обратно - тебе и мне приятно", "качели", "качеля"],
-            ["Не лает, не кусает, а в дом не пускает", "замок"]
-        ];
-
-        var answerCount = 0;
-        var noAnswerCount = 0;
-        var askNum = [];
-        var n;
-
-        while (askNum.length < 3) {
-            n = parseInt(Math.random() * (askMatrix.length - 1));
-            askNum.push(askMatrix[n]);
-            askMatrix.splice(n, 1);
-        }
-    </script>
 
 </head>
 
@@ -104,34 +24,45 @@
 
                     <div class="box">
 
+                        <?php
 
-                        <p id="info"></p>
+                            if(isset($_GET['userAnswer1']) && isset($_GET['userAnswer2']) && isset($_GET['userAnswer3'])){
 
-                        <p id="ask1">
-                            <script>
-                                document.write(askNum[0][0]);
-                            </script>
-                        </p>
-                        <input type="text" id="userAnswer1">
+                                $userAnswer=$_GET["userAnswer1"];
+                                $score=0;
+                                if($userAnswer=="огурец"||$userAnswer=="огурчик"){
+                                    $score++;
+                                }
 
-                        <p id="ask2">
-                            <script>
-                                document.write(askNum[1][0]);
-                            </script>
-                        </p>
-                        <input type="text" id="userAnswer2">
+                                $userAnswer=$_GET["userAnswer2"];
+                                if($userAnswer=="елка"||$userAnswer=="ель"){
+                                    $score++;
+                                }
 
-                        <p id="ask3">
-                            <script>
-                                document.write(askNum[2][0]);
-                            </script>
-                        </p>
-                        <input type="text" id="userAnswer3">
+                                $userAnswer=$_GET["userAnswer3"];
+                                if($userAnswer=="лампочка"||$userAnswer=="лампа"){
+                                    $score++;
+                                }
+                                echo "Вы угадали ". $score. " загадок.";
+                            }                        
+                        ?>
 
-                        <br>
-                        <a href="#" onClick="checkAnswers();" id="button">Ответить</a>
+                        <form method="GET">
+                            
+                            <p>Без окон без дверей полна горница людей</p>
+                            <input type="text" name="userAnswer1">
 
-                        <a href="#" onClick="retry();" style="display:none;" id="retryButton">Заново</a>
+                            <p>Зимой и летом одним цветом</p>
+                            <input type="text" name="userAnswer2">
+
+                            <p>Висит груша - нельзя схавать</p>
+                            <input type="text" name="userAnswer3">
+                            
+                            <br><br><br>
+
+                            <input type="submit" value="Ответить" name="">
+                            
+                        </form>
 
                     </div>
 
