@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>swr8bit</title>
@@ -49,7 +48,6 @@
     </script>
 
 </head>
-
 <body>
 
     <div class="content">
@@ -68,7 +66,7 @@
 
                         <br>
                         <p id="info"></p>
-                        <p id="ask1">Введите желаемую сумму вклада в рублях</p>
+                        <p id="ask1">Введите сумму вклада в рублях</p>
                         <input type="text" id="rub">
 
                         <p id="ask2">Укажите проценты годовых</p>
@@ -77,7 +75,7 @@
                         <p id="ask3">Укажите на сколько лет будет вклад</p>
                         <input type="text" id="maxYears">
 
-                        <br>
+                        <br><br>
                         <a href="#" onClick="calculate();" id="button">Посчитать</a>
 
                         <a href="#" onClick="detail();" style="display:none;" id="detailButton"><b>Подробно<b></a>
@@ -95,7 +93,5 @@
     </div>
 
 
-
 </body>
-
 </html>

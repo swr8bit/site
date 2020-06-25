@@ -3,3 +3,5 @@
 	<a href="guess.php">Угадай число</a>
 	<a href="passgen.php">Генератор пароля</a>
 	<a href="money.php">Калькулятор вклада</a>
+	<a href="files.php">Файлы и ссылки</a>
+	<a href="log.php">Лог</a>

@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>swr8bit</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
 
     <div class="content">
@@ -20,13 +17,13 @@
             <div class="content">
                 <div class="center">
 
-                    <h1>Генератор пароля</h1>
+                    <h1>Генератор случайных паролей</h1>
 
                     <div class="box">
 
 
                     <form method="post">
-                        <p>Введите длину пароля</p>
+                        <p>Введите желаемую длину пароля</p>
                         <input type="text" name="number" id="number" value="">
                         <p>Сгенерировать пароль средствами PHP</p> 
                         <input class="button" type="submit" value="Генерировать">
@@ -82,7 +79,5 @@
     </div>
 
 
-
 </body>
-
 </html>

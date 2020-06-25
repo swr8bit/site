@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>swr8bit</title>
@@ -29,7 +28,7 @@
         }
 
         function win() {
-            write("info", "Вы выиграли. количество отгаданых загадок - " + answerCount);
+            write("info", "<b>Вы выиграли. количество отгаданых загадок - " + answerCount+"<b>");
             hide("userAnswer1");
             hide("userAnswer2");
             hide("userAnswer3");
@@ -42,7 +41,7 @@
         }
 
         function loss() {
-            write("info", "Проигрыш. Количество правильных ответов - " + answerCount);
+            write("info", "<b>Проигрыш. Количество правильных ответов - " + answerCount+"<b>");
             hide("userAnswer1");
             hide("userAnswer2");
             hide("userAnswer3");
@@ -87,7 +86,6 @@
     </script>
 
 </head>
-
 <body>
 
     <div class="content">
@@ -145,7 +143,5 @@
     </div>
 
 
-
 </body>
-
 </html>

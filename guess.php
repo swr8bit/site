@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>swr8bit</title>
@@ -158,7 +157,6 @@
     </script>
 
 </head>
-
 <body>
 
     <div class="content">
@@ -208,7 +206,5 @@
     </div>
 
 
-
 </body>
-
 </html>
