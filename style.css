@@ -183,6 +183,33 @@ body {
     background-color: #5ba1d3;
 }
 
+.content .box_files {
+    background-color: #ffffff;
+    width: 800px;
+    min-height: 500px;
+    margin: 50px auto 50px auto;
+    padding-top: 37px;
+    padding-left: 38px;
+    padding-bottom: 87px;
+}
+
+.content .box_files p {
+    color: #242424;
+    font-size: 24px;
+    font-weight: 100;
+    text-align: left;
+    margin-bottom: 31px;
+}
+
+.content .box_files a {
+    color: #40678a;
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+    text-decoration: none;
+    padding-right: 30px;
+}
+
 .footer {
     /* # == id */
     background-color: #434445;
