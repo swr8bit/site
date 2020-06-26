@@ -24,6 +24,10 @@
                             <p></p>
                                                     
                              <a href="/files/huinya.zip"><b>Скачать архивчик моих учебных заданий</a>
+                             
+		<?php
+			include	"mycerts.php";
+		?>
                         </div>    
                     
                 </div>
