@@ -1,0 +1,2 @@
+<a href="https://geekbrains.ru/certificates/892320"><b>Сертификат об окончании курса "Основы программирования"</a>
+<a href="https://geekbrains.ru/certificates/872389"><b>Сертификат об окончании курса "Git. Базовый курс"</a>
