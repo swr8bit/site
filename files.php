@@ -20,14 +20,12 @@
 	                    <h1>Ссылки и файлы</h1>
 		                <div class="box_files">
                             <h2></h2>
-                           <a href="https://github.com/swr8bit/site"><b>Репозиторий этого сайта на GitHub</a>
-                            <p></p>
-                                                    
-                             <a href="/files/huinya.zip"><b>Скачать архивчик моих учебных заданий</a>
-                             
-		<?php
-			include	"mycerts.php";
-		?>
+                           	<p><a href="https://github.com/swr8bit/site"><b>Репозиторий этого сайта на GitHub</a></p>
+                            <p><a href="/files/huinya.zip"><b>Скачать архивчик моих учебных заданий</a></p>
+							<br>
+							<?php
+								include	"mycerts.php";
+							?>
                         </div>    
                     
                 </div>
