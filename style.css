@@ -36,7 +36,8 @@ body {
     height: 30px;
     line-height: 30px;
     display: inline-block;
-    padding-right: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .header span {
@@ -190,6 +191,7 @@ body {
     margin: 50px auto 50px auto;
     padding-top: 37px;
     padding-left: 38px;
+    padding-right: 36px;
     padding-bottom: 87px;
 }
 
@@ -207,7 +209,7 @@ body {
     font-weight: 100;
     text-align: center;
     text-decoration: none;
-    padding-right: 30px;
+    margin: 0 15px 0 15px;
 }
 
 .footer {
