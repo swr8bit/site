@@ -13,7 +13,7 @@
 			include	"header.php";
 		?>
 	
-    
+	<div class="contentWrap">
             <div class="content">
                 <div class="center">
                     
@@ -33,7 +33,7 @@
                     
                 </div>
 		    </div>
-    
+    </div>
 
 </div>
 <div class="footer">
