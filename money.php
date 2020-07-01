@@ -4,48 +4,7 @@
     <meta charset="utf-8">
     <title>swr8bit</title>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript">
-        var result = "<b>Изменение cуммы по годам:<b><br><br>";
-
-        function readInt(id) {
-            return +document.getElementById(id).value;
-        }
-
-        function write(id, text) {
-            document.getElementById(id).innerHTML = text;
-        }
-
-        function hide(id) {
-            document.getElementById(id).style.display = "none";
-        }
-
-        function detail() {
-            write("info", result);
-        }
-
-        function retry() {
-            window.location.reload();
-        }
-
-        function calculate() {
-            var sum = readInt("rub");
-            for (years = 1; years <= readInt("maxYears"); years++) {
-                sum = sum + (sum * readInt("percent") / 100);
-                result += "<b>" + years + "-й год: " + sum.toFixed(2) + " рублей<b><br>";
-            }
-            hide("rub");
-            hide("percent");
-            hide("maxYears");
-            hide("ask1");
-            hide("ask2");
-            hide("ask3");
-            hide("button");
-            write("info", "<b>Через <b>" + readInt("maxYears") + " лет сумма вклада составит<br>" + sum.toFixed(2) + " рублей.<b>");
-            write("button", "Пересчитать")
-            document.getElementById("detailButton").style.display = "inline-block";
-            document.getElementById("retryButton").style.display = "inline-block";
-        }
-    </script>
+    <script src="script.js" type="text/javascript"></script>    
 
 </head>
 <body>
