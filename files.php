@@ -20,9 +20,9 @@
 		        <div class="box_files">
 					<p><b>Интересное:</b>
 					<br><br>
-					<a href="https://github.com/swr8bit/site">- Репозиторий этого сайта на GitHub</a>
+					<a href="https://github.com/swr8bit/site" target="_blank">- Репозиторий этого сайта на GitHub</a>
 					<br><br>
-					<a href="/files/huinya.zip">- Скачать архивчик моих учебных заданий</a></p>
+					<a href="/files/huinya.zip">- Скачать архивчик моих первых учебных заданий по javasctipt</a></p>
 					<br><br>
 					<p><b>Учебные задания с безплатной части курса Веб-разрабртки <a href="https://praktikum.yandex.ru/web/"><b>Яндекс.Практикума:</a><b></b>
 					<br><br>
