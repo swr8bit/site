@@ -18,13 +18,18 @@
             <div class="center">
 				<h1>Ссылки и файлы</h1>
 		        <div class="box_files">
-					<p>Интересное:</p>
-                   	<p><a href="https://github.com/swr8bit/site"><b>Репозиторий этого сайта на GitHub</a></p>
-					<p><a href="/files/huinya.zip"><b>Скачать архивчик моих учебных заданий</a></p>
-					<br>
-					<p>Учебные задания с безплатной части<a href="https://praktikum.yandex.ru/web/">курса Веб-разрабртки</a>Яндекс.Практикума:</p>
-                    <p><a href="/praktikum/4rules.html"><b>HTML, css</a><a href="/praktikum/procrastination.html"><b>javasctipt</a></p>
-					<br>
+					<p><b>Интересное:</b>
+					<br><br>
+					<a href="https://github.com/swr8bit/site">- Репозиторий этого сайта на GitHub</a>
+					<br><br>
+					<a href="/files/huinya.zip">- Скачать архивчик моих учебных заданий</a></p>
+					<br><br>
+					<p><b>Учебные задания с безплатной части курса Веб-разрабртки <a href="https://praktikum.yandex.ru/web/"><b>Яндекс.Практикума:</a><b></b>
+					<br><br>
+					<a href="/praktikum/4rules.html">- HTML, CSS - "Четыре правила вёрстки"</a>
+					<br><br>
+					<a href="/praktikum/procrastination.html">- javasctipt - "Прокрастинация"</a></p>
+					<br><br>
 					<?php
 						include	"mycerts.php";
 					?>

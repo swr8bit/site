@@ -91,13 +91,23 @@ body {
 
 .button {
     position: fixed;
-    left: 15px;
-    top: 25px;
-    border: 1px solid #b5b7ba;
-    background-color: #dfdfdf;
-    color: #4d4d4d;
+    left: 18px;
+    top: 18px;
+    color: #fff;
+    background-color: #01030c;
+    border-left: 2px solid #646564;
+    border-right: 2px solid #646564;
+    border-radius: 4px;
     font-size: 20px;
     font-weight: 100;
-    padding: 4px;
+    padding: 6px 4px 4px 4px;
     text-decoration: none;
+}
+
+.button:hover {
+    background-color: #fff;
+    border: 2px solid #7c2d00;
+    color: #7c2d00;
+    font-size: 20px;
+    font-weight: 400;
 }

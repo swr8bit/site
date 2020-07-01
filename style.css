@@ -14,9 +14,9 @@ body {
     border-bottom: 1px solid #b5b7ba;
     background-color: #dfdfdf;
     margin: 0 auto;
-    height: 74px;
+    min-height: 32px;
     text-align: center;
-    padding-top: 15px;
+    padding: 8px 0;
 }
 
 .header .selected {
@@ -33,11 +33,19 @@ body {
     font-weight: 100;
     text-align: left;
     text-decoration: none;
-    height: 30px;
-    line-height: 30px;
+    height: 32px;
+    line-height: 32px;
     display: inline-block;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 8px;
+    border-top: 1px solid #dfdfdf;
+}
+
+.header a:hover {
+    font-weight: 300;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    border-left: 1px solid #b5b7ba;
+    border-right: 1px solid #b5b7ba;
 }
 
 .header span {
@@ -63,16 +71,15 @@ body {
 
 .content h3 {
     color: #242424;
-    font-size: 35px;
+    font-size: 24px;
     font-weight: 300;
     text-align: left;
-    margin-left: 41px;
-    margin-bottom: 52px;
+    margin-bottom: 31px;
 }
 
 .content h5 {
     color: #242424;
-    font-size: 24px;
+    font-size: 26px;
     text-align: left;
 }
 
@@ -88,9 +95,9 @@ body {
     width: 80%;
     min-height: 550px;
     margin: 50px auto 50px auto;
-    padding-left: 38px;
+    padding-left: 58px;
     padding-bottom: 87px;
-    padding-right: 36px;
+    padding-right: 48px;
 }
 
 .box_text p {
@@ -107,22 +114,28 @@ body {
     font-weight: 100;
     text-align: center;
     text-decoration: none;
-    padding-right: 30px;
+    padding-right: 10px;
+}
+
+.box_text a:hover {
+    font-weight: 300;
+    color: #4d4d4d;
 }
 
 .media {
     margin-right: 0;
 }
 
-.box {
+.box,
+.box_files {
     background-color: #ffffff;
     width: 80%;
     min-height: 500px;
     margin: 50px auto 50px auto;
-    padding-top: 37px;
-    padding-left: 38px;
+    padding-top: 38px;
+    padding-right: 48px;
     padding-bottom: 87px;
-    padding-right: 36px;
+    padding-left: 58px;
 }
 
 .box p {
@@ -184,17 +197,6 @@ body {
     background-color: #5ba1d3;
 }
 
-.box_files {
-    background-color: #ffffff;
-    width: 80%;
-    min-height: 500px;
-    margin: 50px auto 50px auto;
-    padding-top: 37px;
-    padding-left: 38px;
-    padding-right: 36px;
-    padding-bottom: 87px;
-}
-
 .box_files p {
     color: #242424;
     font-size: 24px;
@@ -209,7 +211,12 @@ body {
     font-weight: 100;
     text-align: center;
     text-decoration: none;
-    margin: 0 15px 0 15px;
+    margin-right: 20px;
+}
+
+.box_files a:hover {
+    font-weight: 300;
+    color: #4d4d4d;
 }
 
 .footer {
