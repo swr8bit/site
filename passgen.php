@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>swr8bit</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -51,20 +52,6 @@
                         <p id="info"></p>
                         <p>Сгенерировать пароль средствами javascript</p>
                         <a href="#" onClick="passGen();" id="button">Генерировать</a>
-                      
-                      <script type="text/javascript">
-                        
-                        var pass=""
-                        function passGen(){
-                            
-                            var symbols="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-                            for(i=0;i<(parseInt(document.getElementById("number").value));i++){
-                                pass+=symbols.charAt(parseInt(Math.random() * (symbols.length - 1)));
-                            }
-                            document.getElementById("pass").innerHTML = "Ваш пароль: <b>"+pass+"<b>";
-                        }
-                      
-                      </script>
                       
                         <p id="pass">Ваш пароль: </p>
                     </div>
