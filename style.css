@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -16,7 +17,7 @@ body {
     margin: 0 auto;
     min-height: 32px;
     text-align: center;
-    padding: 8px 0;
+    padding: 8px 8px;
 }
 
 .header .selected {
@@ -33,15 +34,16 @@ body {
     font-weight: 100;
     text-align: left;
     text-decoration: none;
-    height: 32px;
+    text-align: center;
     line-height: 32px;
     display: inline-block;
     padding: 8px;
-    border-top: 1px solid #dfdfdf;
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf;
 }
 
 .header a:hover {
-    font-weight: 300;
+    text-shadow: 0 0 .67px #4d4d4d, 0 0 .67px #4d4d4d;
     background-color: #f7f7f7;
     border-radius: 4px;
     border-left: 1px solid #b5b7ba;
@@ -92,7 +94,7 @@ body {
 
 .box_text {
     background-color: #ffffff;
-    width: 80%;
+    width: 90%;
     min-height: 550px;
     margin: 50px auto 50px auto;
     padding-left: 58px;
@@ -118,7 +120,7 @@ body {
 }
 
 .box_text a:hover {
-    font-weight: 300;
+    text-shadow: 0 0 .67px #4d4d4d, 0 0 .67px #4d4d4d;
     color: #4d4d4d;
 }
 
@@ -129,7 +131,7 @@ body {
 .box,
 .box_files {
     background-color: #ffffff;
-    width: 80%;
+    width: 90%;
     min-height: 500px;
     margin: 50px auto 50px auto;
     padding-top: 38px;
@@ -215,7 +217,7 @@ body {
 }
 
 .box_files a:hover {
-    font-weight: 300;
+    text-shadow: 0 0 .67px #4d4d4d, 0 0 .67px #4d4d4d;
     color: #4d4d4d;
 }
 
